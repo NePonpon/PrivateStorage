@@ -1,8 +1,8 @@
 // private_storage:macro
 
 dispatch minecraft:storage[private_storage:macro] to struct Macro {
-    /// マクロ引数
-    [#[dispatcher_key=("private_storage:macro")] string]?: private_storage:macro[[%key]]
+  /// マクロ引数
+  [#[dispatcher_key=("private_storage:macro")] string]?: private_storage:macro[[%key]]
 }
 
 dispatch private_storage:macro[%none] to any
@@ -11,23 +11,23 @@ dispatch private_storage:macro[%none] to any
 /// private_storage:root[<ここにマクロ引数にするkeyを入れる>]
 /// 各マクロ引数への補完が表示されるようになります
 dispatch private_storage:macro[TEST] to struct {
-    ponpon: int
+  ponpon: int
 }
 
 dispatch private_storage:macro[gc_get_target] to struct GC_GetTarget {
-    /// 実行GCタイミング
-    gc_count: int
+  /// 実行GCタイミング
+  gc_count: int
 }
 
 dispatch private_storage:macro[access] to struct Access {
-    /// 所有者によるアクセス
-    owner?: super::sys::StorageOwner,
-    /// Idによるアクセス
-    id?: super::sys::StorageId
+  /// 所有者によるアクセス
+  owner?: super::sys::StorageOwner,
+  /// Idによるアクセス
+  id?: super::sys::StorageId
 }
 
 dispatch private_storage:macro[provide] to struct Provide {
-    /// シフトビット
-    /// 8進数における各桁の数値
-    shift: int @0..7
+  /// シフトビット
+  /// 8進数における各桁の数値
+  shift: int @0..7
 }
