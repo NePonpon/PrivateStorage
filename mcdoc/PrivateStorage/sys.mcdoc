@@ -3,7 +3,7 @@ use super::PrivateStorage
 
 dispatch minecraft:storage[private_storage:sys] to struct System {
   /// メインストレージ遅延割り当て用
-  inital: [
+  initial: [
     [
       [
         [

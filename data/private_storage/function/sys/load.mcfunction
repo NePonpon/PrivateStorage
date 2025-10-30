@@ -3,4 +3,4 @@
 # ワールドロード時処理
 #
 
-execute unless data storage private_storage:sys inital run function private_storage:sys/init
+execute unless data storage private_storage:sys initial run function private_storage:sys/init
