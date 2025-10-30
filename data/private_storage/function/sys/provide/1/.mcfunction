@@ -14,8 +14,8 @@ data remove storage private_storage: _[13]
 data remove storage private_storage: _[12]
 data remove storage private_storage: _[11]
 data remove storage private_storage: _[10]
-data remove storage private_storage: _[ 9]
-data remove storage private_storage: _[ 8]
+data remove storage private_storage: _[9]
+data remove storage private_storage: _[8]
 
 function private_storage:sys/provide/1/shift with storage private_storage:macro provide
 

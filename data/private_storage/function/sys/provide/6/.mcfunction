@@ -14,7 +14,7 @@ data remove storage private_storage: _[-8][-8][-8][-8][-8][13]
 data remove storage private_storage: _[-8][-8][-8][-8][-8][12]
 data remove storage private_storage: _[-8][-8][-8][-8][-8][11]
 data remove storage private_storage: _[-8][-8][-8][-8][-8][10]
-data remove storage private_storage: _[-8][-8][-8][-8][-8][ 9]
-data remove storage private_storage: _[-8][-8][-8][-8][-8][ 8]
+data remove storage private_storage: _[-8][-8][-8][-8][-8][9]
+data remove storage private_storage: _[-8][-8][-8][-8][-8][8]
 
 function private_storage:sys/provide/6/shift with storage private_storage:macro provide
