@@ -1,9 +1,14 @@
 {
-    "pack": {
-        "pack_format": 92,
-        "description": [
-            {"text":"-= PrivateStorage =-"},"\n",
-            {"text":"個人ストレージ提供データパック"}
-        ]
-    }
+  "pack": {
+    "supported_formats": {
+      "min_inclusive": 71,
+      "max_inclusive": 81
+    },
+    "min_format": [82, 0],
+    "max_format": [88, 0],
+    "description": [
+      { "text": "-= PrivateStorage =-" },"\n",
+      { "text": "個人ストレージ提供データパック" }
+    ]
+  }
 }
