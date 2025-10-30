@@ -3,7 +3,7 @@
 
 ## 動作環境
 Minecraft Java Edition  
-1.21.5 - 1.21.10
+1.21.9 - 1.21.10
 
 ## 導入方法
 [Releases](https://github.com/NePonpon/PrivateStorage/releases) からデータパックをダウンロードし、ワールドの`datapacks`フォルダへ配置してください。
