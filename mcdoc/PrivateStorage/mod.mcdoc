@@ -17,7 +17,7 @@ dispatch minecraft:storage[private_storage:] to struct Main {
         ] @8..15
       ] @8..15
     ] @8..15
-  ] @8..15
+  ] @..15
 }
 
 struct PrivateStorage {
