@@ -1,0 +1,9 @@
+{
+    "pack": {
+        "pack_format": 92,
+        "description": [
+            {"text":"-= PrivateStorage =-"},"\n",
+            {"text":"個人ストレージ提供データパック"}
+        ]
+    }
+}

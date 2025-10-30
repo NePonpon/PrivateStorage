@@ -1,0 +1,32 @@
+// private_storage:
+
+dispatch minecraft:storage[private_storage:] to struct Main {
+    /// 個人ストレージ
+    /// `private_storage:please`を実行すると、
+    /// `_[-8][-8][-8][-8][-8][-8]`に、実行者の
+    /// 個人ストレージが提供されます。
+    "_": [
+        [
+            [
+                [
+                    [
+                        [
+                            PrivateStorage
+                        ] @8..15
+                    ] @8..15
+                ] @8..15
+            ] @8..15
+        ] @8..15
+    ]
+}
+
+struct PrivateStorage {
+    [string]: private_storage:root[[%key]]
+}
+
+dispatch private_storage:root[%none] to any
+
+/// example
+/// private_storage:root[<ここにrootに入れるkeyを入れる>]
+/// private_storage内に補完が表示されるようになります
+dispatch private_storage:root[Inventory] to minecraft:entity[player][Inventory]

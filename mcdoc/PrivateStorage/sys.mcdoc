@@ -1,0 +1,102 @@
+// private_storage:sys
+use super::PrivateStorage
+
+dispatch minecraft:storage[private_storage:sys] to struct System {
+    /// メインストレージ遅延割り当て用
+    inital: [
+        [
+            [
+                [
+                    [
+                        [
+                            PrivateStorage
+                        ] @..8
+                    ] @..8
+                ] @..8
+            ] @..8
+        ] @..8
+    ],
+    /// 提供時Listシフト用
+    shift_list: [
+        [EmptyList] @0,
+        [EmptyList] @1,
+        [EmptyList] @2,
+        [EmptyList] @3,
+        [EmptyList] @4,
+        [EmptyList] @5,
+        [EmptyList] @6,
+        [EmptyList] @7,
+    ],
+    /// 提供時Compoundシフト用
+    shift_compound: [
+        [EmptyCompound] @0,
+        [EmptyCompound] @1,
+        [EmptyCompound] @2,
+        [EmptyCompound] @3,
+        [EmptyCompound] @4,
+        [EmptyCompound] @5,
+        [EmptyCompound] @6,
+        [EmptyCompound] @7,
+    ],
+    /// 今回提供予定Id
+    provide_id?: ProvidedId,
+    /// 前回提供済みId
+    previous_id?: ProvidedId,
+    /// 提供済みIdテーブル
+    provided_id_table: [ProvidedId],
+    /// GC済みIdリスト
+    collected_id: [StorageId],
+    /// GC用ストレージ領域
+    gc?: GarbageCollection,
+    /// provide用ストレージ領域
+    provide?: Provide,
+    /// util用ストレージ領域
+    util?: Util,
+    /// フラグ
+    flag?: boolean
+}
+
+type EmptyList = [any] @0
+type EmptyCompound = struct {}
+
+/// 提供済みIdレコード
+struct ProvidedId {
+    /// 提供Id
+    id: StorageId,
+    /// 所有者
+    owner: StorageOwner,
+    /// 提供時のGC実行回数
+    provide_start: int,
+    /// 次のGCタイミングのステップ
+    gc_step: (int | 1.34), // 1.34は初期値 1.34*1.5 = 2.01
+    /// 次回GCタイミング
+    gc: int
+}
+
+/// 提供Id
+/// メインストレージへのアドレスになる
+/// Id限界は8^6 - 1
+type StorageId = int @0..<262144
+/// 所有者のUUID or プレイヤー名
+type StorageOwner = (
+    #[uuid] string |
+    #[score_holder] string |    
+)
+
+/// GC用のデータ
+struct GarbageCollection {
+    /// GC実行対象リスト
+    gc_target: [ProvidedId]
+}
+
+// provide用のデータ
+struct Provide {
+    /// provide先計算用ターゲット
+    target: int
+}
+
+/// Util用のデータ
+struct Util {
+    /// UUID or PlayerName
+    uuid?: StorageOwner
+}
