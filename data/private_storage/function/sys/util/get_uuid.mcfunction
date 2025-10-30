@@ -1,6 +1,8 @@
 #> private_storage:sys/util/get_uuid
 #
 # エンティティのuuidを取得
+# selectorテキストコンポーネントを解決すると、
+# insertionにエンティティのUUIDかプレイヤー名が入る
 #
 
 tag @s add PrivateStorageGetUUID

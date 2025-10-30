@@ -3,6 +3,7 @@
 # GC実行チェック
 #
 
+# スコア存在確認
 data modify storage private_storage:macro access.owner set from storage private_storage:sys gc.gc_target[-1].owner
 execute store success storage private_storage:sys flag byte 1 run function private_storage:sys/gc/check_exist with storage private_storage:macro access
 

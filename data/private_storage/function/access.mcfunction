@@ -4,6 +4,7 @@
 # 指定したストレージへアクセスする
 #
 
+# 有効値チェック 0 ～ 8^6 - 1
 execute unless score _ PrivateStorageId matches 0..262143 run return fail
 
 execute store result storage private_storage:sys provide_id int 1 run scoreboard players get _ PrivateStorageId
