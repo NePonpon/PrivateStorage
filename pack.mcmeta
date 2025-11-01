@@ -5,8 +5,6 @@
       "min_inclusive": 18,
       "max_inclusive": 81
     },
-    "min_format": [82, 0],
-    "max_format": [88, 0],
     "description": [
       { "text": "-= PrivateStorage =-" },"\n",
       { "text": "個人ストレージ提供データパック" }
