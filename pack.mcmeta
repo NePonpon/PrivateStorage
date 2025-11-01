@@ -18,6 +18,10 @@
           "min_inclusive": 48,
           "max_inclusive": 81
         }
+      },
+      {
+        "directory": "base_conversion_uses_storage_before_1_21",
+        "formats": 41
       }
     ]
   }
