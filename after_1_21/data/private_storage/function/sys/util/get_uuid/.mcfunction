@@ -1,4 +1,4 @@
-#> private_storage:sys/util/get_uuid
+#> private_storage:sys/util/get_uuid/
 #
 # エンティティのuuidを取得
 # selectorテキストコンポーネントを解決すると、
