@@ -1,0 +1,9 @@
+{
+    "condition": "value_check",
+    "value": {
+        "type": "storage",
+        "storage": "private_storage:sys",
+        "path": "provide.target"
+    },
+    "range": -128
+}
