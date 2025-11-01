@@ -7,7 +7,7 @@ execute store result storage private_storage:sys provide.target int 1 run data g
 function private_storage:sys/provide/get_octal
 data modify storage private_storage:macro provide.shift set from storage private_storage:sys provide.target
 
-execute unless data storage private_storage: _[-8][0] run data modify storage private_storage: _ set from storage private_storage:sys initial[0]
+execute unless data storage private_storage: _[-8][0] run data modify storage private_storage: _[-8] set from storage private_storage:sys initial[0]
 
 data remove storage private_storage: _[-8][14]
 data remove storage private_storage: _[-8][13]
