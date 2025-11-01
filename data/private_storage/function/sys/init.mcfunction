@@ -10,7 +10,7 @@ data merge storage private_storage: {_:[]}
 # システムストレージ
 data merge storage private_storage:sys {\
     provided_id_table:[],\
-    collected_id:[],\
+    collected_id:[0],\
     initial:[[[[[[\
         {},{},{},{},{},{},{},{}\
         ],[],[],[],[],[],[],[]\
