@@ -38,6 +38,13 @@ dispatch minecraft:storage[private_storage:sys] to struct System {
     [EmptyCompound] @6,
     [EmptyCompound] @7,
   ],
+  /// 提供時シフト用
+  /// shift_listかshift_compoundの
+  /// いずれかを使ってシフトを行う
+  shift?: [(
+    EmptyList
+  | EmptyCompound
+  )] @0..7,
   /// 今回提供予定Id
   provide_id?: ProvidedId,
   /// 前回提供済みId
@@ -79,8 +86,8 @@ struct ProvidedId {
 type StorageId = int @0..<262144
 /// 所有者のUUID or プレイヤー名
 type StorageOwner = (
-  #[uuid] string |
-  #[score_holder] string |  
+  #[uuid] string
+| #[score_holder] string
 )
 
 /// GC用のデータ
