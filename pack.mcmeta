@@ -9,5 +9,16 @@
       { "text": "-= PrivateStorage =-" },"\n",
       { "text": "個人ストレージ提供データパック" }
     ]
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "after_1_21",
+        "formats": {
+          "min_inclusive": 48,
+          "max_inclusive": 81
+        }
+      }
+    ]
   }
 }
