@@ -13,14 +13,14 @@
   "overlays": {
     "entries": [
       {
-        "directory": "get_uuid_with_insertion",
+        "directory": "get_uuid_with/insertion",
         "formats": {
           "min_inclusive": 71,
           "max_inclusive": 81
         }
       },
       {
-        "directory": "get_uuid_with_conversion_after_1_21",
+        "directory": "get_uuid_with/conversion_after_1_21",
         "formats": {
           "min_inclusive": 48,
           "max_inclusive": 61
@@ -34,7 +34,7 @@
         }
       },
       {
-        "directory": "get_uuid_with_conversion_before_1_21",
+        "directory": "get_uuid_with/conversion_before_1_21",
         "formats": 41
       },
       {
