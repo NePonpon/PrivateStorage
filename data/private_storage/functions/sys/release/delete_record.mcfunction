@@ -1,4 +1,4 @@
-#> private_storage:sys/release/
+#> private_storage:sys/release/delete_record
 #
 # Idテーブルのレコードを削除
 #

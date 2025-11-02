@@ -7,8 +7,7 @@ function private_storage:sys/gc/
 
 # プレイヤー名変更時 引継ぎ処理
 # 正常に引継ぎできればここで終了
-execute if entity @s[type=minecraft:player] if data entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Modifiers[{Name:"private_storage:provided"}] run function private_storage:sys/allocate/player/rename/
-execute if data storage private_storage:sys {flag:1b} run return 0
+execute if entity @s[type=minecraft:player] if data entity @s attributes[{id:"minecraft:generic.movement_speed"}].modifiers[{id:"private_storage:provided"}] if function private_storage:sys/allocate/player/rename/ run return 0
 
 # 新規Idを割り当て
 execute unless data storage private_storage:sys collected_id[0] store result score @s PrivateStorageId run scoreboard players add $NextId PrivateStorageCalc 1

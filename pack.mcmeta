@@ -21,6 +21,10 @@
         "formats": 41
       },
       {
+        "directory": "rename_player_for_1_20_5",
+        "formats": 41
+      },
+      {
         "directory": "after_1_21",
         "formats": {
           "min_inclusive": 48,
@@ -32,6 +36,17 @@
         "formats": {
           "min_inclusive": 48,
           "max_inclusive": 61
+        }
+      },
+      {
+        "directory": "rename_player_between_1_21_to_1_21_1",
+        "formats": 48
+      },
+      {
+        "directory": "rename_player_after_1_21_2",
+        "formats": {
+          "min_inclusive": 57,
+          "max_inclusive": 81
         }
       },
       {
