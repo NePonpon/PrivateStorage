@@ -77,13 +77,18 @@ struct ProvidedId {
   /// 次のGCタイミングのステップ
   gc_step: (int | 1.34), // 1.34は初期値 1.34*1.5 = 2.01
   /// 次回GCタイミング
-  gc: int
+  gc: int,
+  /// このIdはプレイヤーのものかどうか
+  is_player: boolean
 }
 
 /// 提供Id
 /// メインストレージへのアドレスになる
 /// Id限界は8^6 - 1
-type StorageId = int @0..<262144
+type StorageId = (
+    #[canonical] int @0..<262144 
+  | string  // 文字列でIdを指定する場合
+)
 /// 所有者のUUID or プレイヤー名
 type StorageOwner = (
   #[uuid] string
@@ -99,7 +104,14 @@ struct GarbageCollection {
 // provide用のデータ
 struct Provide {
   /// provide先計算用ターゲット
-  target: (int | byte)  // byte は、上位bitを消すときにオーバーフローを利用するためにこの型にしている
+  target: (int | byte),  // byte は、上位bitを消すときにオーバーフローを利用するためにこの型にしている
+  /// プレイヤー名引継ぎ用データ
+  rename_player?: struct RenamePlayer {
+    /// movment_speedのattribute_modifierのidリスト
+    modifier_ids: [string],
+    /// Idが記録されているmodifierかどうかをチェックする
+    check_id: string,
+  }
 }
 
 /// Util用のデータ
