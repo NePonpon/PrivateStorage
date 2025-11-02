@@ -1,4 +1,4 @@
-#> test_private_storage:
+#> test_private_storage:access
 #
 # 他エンティティのストレージにアクセスできる
 #

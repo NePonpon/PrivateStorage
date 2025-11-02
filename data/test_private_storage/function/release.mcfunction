@@ -1,4 +1,4 @@
-#> test_private_storage:
+#> test_private_storage:release
 #
 # ストレージ解放のテスト
 #
