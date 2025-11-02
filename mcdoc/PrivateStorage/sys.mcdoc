@@ -108,7 +108,10 @@ struct Provide {
   /// プレイヤー名引継ぎ用データ
   rename_player?: struct RenamePlayer {
     /// movment_speedのattribute_modifierのidリスト
-    modifier_ids: [string],
+    modifier_ids: [(
+        string
+      | #[until="1.21"] ::java::world::entity::mob::AttributeModifier // NameとUUIDに分かれている時代で、UUIDからNameを探索するため
+    )],
     /// Idが記録されているmodifierかどうかをチェックする
     check_id: string,
   }

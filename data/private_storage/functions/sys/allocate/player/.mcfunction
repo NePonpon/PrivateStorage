@@ -4,7 +4,7 @@
 #
 
 # 割り当て済みタグ
-attribute @s minecraft:movement_speed modifier add private_storage:provided 0 add_value
+attribute @s minecraft:generic.movement_speed modifier add 9c69dbc1-f23b-41f5-b041-d77773eb73c3 "private_storage:provided" 0 add
 
 # 割り当てIdタグ 割り当てownerタグ
 execute store result storage private_storage:macro allocate_player.id int 1 run scoreboard players get @s PrivateStorageId
