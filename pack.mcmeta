@@ -13,9 +13,17 @@
   "overlays": {
     "entries": [
       {
-        "directory": "get_uuid_with_insertion",
+        "directory": "base_conversion_uses_storage_before_1_21",
+        "formats": 41
+      },
+      {
+        "directory": "get_uuid_with_conversion_before_1_21",
+        "formats": 41
+      },
+      {
+        "directory": "after_1_21",
         "formats": {
-          "min_inclusive": 71,
+          "min_inclusive": 48,
           "max_inclusive": 81
         }
       },
@@ -27,19 +35,11 @@
         }
       },
       {
-        "directory": "after_1_21",
+        "directory": "get_uuid_with_insertion",
         "formats": {
-          "min_inclusive": 48,
+          "min_inclusive": 71,
           "max_inclusive": 81
         }
-      },
-      {
-        "directory": "get_uuid_with_conversion_before_1_21",
-        "formats": 41
-      },
-      {
-        "directory": "base_conversion_uses_storage_before_1_21",
-        "formats": 41
       }
     ]
   }
