@@ -99,7 +99,7 @@ struct GarbageCollection {
 // provide用のデータ
 struct Provide {
   /// provide先計算用ターゲット
-  target: int
+  target: (int | byte)  // byte は、上位bitを消すときにオーバーフローを利用するためにこの型にしている
 }
 
 /// Util用のデータ
