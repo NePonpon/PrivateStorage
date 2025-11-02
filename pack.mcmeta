@@ -20,6 +20,13 @@
         }
       },
       {
+        "directory": "get_uuid_with_conversion_after_1_21",
+        "formats": {
+          "min_inclusive": 48,
+          "max_inclusive": 61
+        }
+      },
+      {
         "directory": "after_1_21",
         "formats": {
           "min_inclusive": 48,
