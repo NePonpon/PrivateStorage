@@ -105,5 +105,24 @@ struct Provide {
 /// Util用のデータ
 struct Util {
   /// UUID or PlayerName
-  uuid?: StorageOwner
+  uuid?: StorageOwner,
+  /// UUID変換用のデータ
+  /// [I;]形式から16進文字列への変換に使用する
+  #[until="1.21.5"]
+  uuid_convert?: struct UUIDConvert {
+    /// 変換元UUID
+    entity?: ::java::world::entity::EntityBase[UUID],
+    /// UUID構築用文字リスト
+    /// 最終的な文字列と逆順に並ぶ
+    uuid_strings?: [UUIDChars],
+    /// 変換対象int値
+    target?: int,
+    /// 変換対象桁int値
+    convert?: (int | byte), // byte は、上位bitを消すときにオーバーフローを利用するためにこの型にしている
+    /// UUID文字テーブル
+    /// 負のシフトにも対応できるようになっている
+    uuid_char_table: [UUIDChars]
+  },
 }
+
+type UUIDChars = #[match_regex="([0-9a-f]|-)+"] string

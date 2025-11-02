@@ -16,5 +16,5 @@ execute store result storage private_storage:sys provided_id_table[-1].id int 1 
 execute store result storage private_storage:sys provided_id_table[-1].provide_start int 1 run scoreboard players get $GC_Count PrivateStorageCalc
 execute store result storage private_storage:sys provided_id_table[-1].gc int 1 run scoreboard players add $GC_Count PrivateStorageCalc 1
 scoreboard players remove $GC_Count PrivateStorageCalc 1
-function private_storage:sys/util/get_uuid
+function private_storage:sys/util/get_uuid/
 data modify storage private_storage:sys provided_id_table[-1].owner set from storage private_storage:sys util.uuid
