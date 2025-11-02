@@ -31,3 +31,10 @@ dispatch private_storage:macro[provide] to struct Provide {
   /// 8進数における各桁の数値
   shift: int @0..7
 }
+
+dispatch private_storage:macro[allocate_player] to struct RenamePlayer {
+  /// 移行対象プレイヤーのId
+  id?: super::sys::StorageId,
+  /// 削除するIdのmodifier_id
+  modifier_id?: #[id="attribute_modifier"] string
+}
