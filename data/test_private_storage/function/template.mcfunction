@@ -17,4 +17,3 @@ function private_storage:sys/hard_reset
 
 
 ## 後片付け
-

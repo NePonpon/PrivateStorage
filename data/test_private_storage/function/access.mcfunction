@@ -20,7 +20,7 @@ function private_storage:access
 data modify storage private_storage:test access.result set from storage private_storage: _[-8][-8][-8][-8][-8][-8].private_storage_test_access
 
 ## 結果確認
-execute store success storage private_storage:test success byte 1 run data modify storage private_storage:test access.answer set from storage private_storage:test access.result
+execute store success storage private_storage:test success byte 1 run data modify storage private_storage:test access.result set from storage private_storage:test access.answer
 
 execute if data storage private_storage:test {success:false} run tellraw @a [{"text":"","color":"white"},"[access] OK"]
 execute if data storage private_storage:test {success: true} run tellraw @a [{"text":"","color":"red"},"[access] NG"]

@@ -20,7 +20,7 @@ function private_storage:please
 data modify storage private_storage:test please.result.private_storage_test_please set from storage private_storage: _[-8][-8][-8][-8][-8][-8].private_storage_test_please
 
 ## 結果確認
-execute store success storage private_storage:test success byte 1 run data modify storage private_storage:test please.answer set from storage private_storage:test please.result
+execute store success storage private_storage:test success byte 1 run data modify storage private_storage:test please.result set from storage private_storage:test please.answer
 
 execute if data storage private_storage:test {success:false} run tellraw @a [{"text":"","color":"white"},"[please] OK"]
 execute if data storage private_storage:test {success: true} run tellraw @a [{"text":"","color":"red"},"[please] NG"]

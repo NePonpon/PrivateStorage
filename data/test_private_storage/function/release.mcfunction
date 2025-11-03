@@ -19,4 +19,3 @@ execute if data storage private_storage:test {success:false} run tellraw @a [{"t
 execute if data storage private_storage:test {success: true} run tellraw @a [{"text":"",color:"red"},"[release] NG"]
 
 ## 後片付け
-
