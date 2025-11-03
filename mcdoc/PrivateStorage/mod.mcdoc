@@ -24,7 +24,7 @@ struct PrivateStorage {
   [string]: private_storage:root[[%key]]
 }
 
-dispatch private_storage:root[%none] to any
+dispatch private_storage:root[%unknown] to any
 
 /// example
 /// private_storage:root[<ここにrootに入れるkeyを入れる>]
