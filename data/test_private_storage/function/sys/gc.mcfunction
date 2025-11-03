@@ -18,8 +18,8 @@ execute as @e[tag=4,distance=..0.01] run function private_storage:please
 
 ## 正解を設定
 # 1,3を削除
-# GCされた3番を新規獲得する
-data modify storage private_storage:test gc.answer set value [0,2,3,4]
+# GCされた1番を新規獲得する
+data modify storage private_storage:test gc.answer set value [0,2,4,1]
 
 ## 実行
 kill @e[tag=1,distance=..0.01]
