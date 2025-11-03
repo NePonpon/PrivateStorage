@@ -2,6 +2,10 @@
   "values": [
     "test_private_storage:please",
     "test_private_storage:release",
-    "test_private_storage:access"
+    "test_private_storage:access",
+    "test_private_storage:sys/allocate/rename_player/success",
+    "test_private_storage:sys/allocate/rename_player/fail",
+    "test_private_storage:sys/gc",
+    "test_private_storage:sys/util/get_uuid"
   ]
 }
