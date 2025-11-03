@@ -1,0 +1,14 @@
+// private_storage:test
+
+dispatch minecraft:storage[private_storage:test] to struct Test {
+  /// このテストの結果
+  success: boolean,
+  [#[dispatcher_key="private_storage:test"] string]?: private_storage:test[[%key]]
+}
+
+dispatch private_storage:test[%unknown] to struct TestBase {
+  /// テスト実行結果
+  result: any,
+  /// テストの答え
+  answer: any
+}
