@@ -5,7 +5,7 @@ dispatch minecraft:storage[private_storage:macro] to struct Macro {
   [#[dispatcher_key=("private_storage:macro")] string]?: private_storage:macro[[%key]]
 }
 
-dispatch private_storage:macro[%none] to any
+dispatch private_storage:macro[%unknown] to any
 
 /// example
 /// private_storage:root[<ここにマクロ引数にするkeyを入れる>]
