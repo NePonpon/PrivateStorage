@@ -11,7 +11,7 @@
 #
 
 # 割り当て済みタグ
-attribute @s minecraft:generic.movement_speed modifier remove private_storage:provided
+attribute @s minecraft:movement_speed modifier remove private_storage:provided
 
 # movment_speedのmodifierからIdが含まれたmodifier_idを取得
 data remove storage private_storage:sys provide.rename_player.modifier_ids
