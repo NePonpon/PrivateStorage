@@ -7,6 +7,7 @@ function private_storage:sys/gc/
 
 # プレイヤー名変更時 引継ぎ処理
 # 正常に引継ぎできればここで終了
+data modify storage private_storage:sys flag set value 0b
 execute if entity @s[type=minecraft:player] if data entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Modifiers[{Name:"private_storage:provided"}] run function private_storage:sys/allocate/player/rename/
 execute if data storage private_storage:sys {flag:1b} run return 0
 
