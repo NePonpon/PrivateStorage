@@ -15,7 +15,7 @@ function private_storage:release
 ## 結果確認
 execute store success storage private_storage:test success byte 1 run scoreboard players get @s PrivateStorageId
 
-execute if data storage private_storage:test {success:false} run tellraw @a [{"text":"",color:"white"},"[release] OK"]
-execute if data storage private_storage:test {success: true} run tellraw @a [{"text":"",color:"red"},"[release] NG"]
+execute if data storage private_storage:test {success:false} run tellraw @a [{"text":"","color":"white"},"[release] OK"]
+execute if data storage private_storage:test {success: true} run tellraw @a [{"text":"","color":"red"},"[release] NG"]
 
 ## 後片付け
