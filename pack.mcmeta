@@ -4,7 +4,8 @@
     "max_format": [88, 0],
     "description": [
       { "text": "-= PrivateStorage =-" },"\n",
-      { "text": "個人ストレージ提供データパック" }
+      { "text": "個人ストレージ提供データパック" },"\n",
+      { "text": "for 1.21.9 - latest" }
     ]
   }
 }
