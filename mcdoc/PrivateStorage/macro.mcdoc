@@ -1,3 +1,5 @@
+use super::sys::UUIDChars
+
 // private_storage:macro
 
 dispatch minecraft:storage[private_storage:macro] to struct Macro {
@@ -37,4 +39,19 @@ dispatch private_storage:macro[allocate_player] to struct RenamePlayer {
   id?: super::sys::StorageId,
   /// 削除するIdのmodifier_id
   modifier_id?: #[id="attribute_modifier"] string
+}
+
+#[until="1.21.5"]
+dispatch private_storage:macro[uuid_convert] to struct UUIDConvert {
+  /// シフトビット
+  /// 16進数における各桁の数値
+  shift: int @0..15
+}
+
+#[until="1.21.5"]
+dispatch private_storage:macro[uuid_concat] to struct UUIDConcat {
+  /// 左側の文字
+  left: UUIDChars,
+  /// 右側の文字
+  right: UUIDChars
 }

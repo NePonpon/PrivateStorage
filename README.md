@@ -1,12 +1,21 @@
 # PrivateStorage
 全てのエンティティへ個別のストレージを提供します。
 
+> [!NOTE]  
+> このブランチでは、1.21.8 以前への対応を行っています。  
+> 1.21.9 以降へは[`main`](https://github.com/NePonpon/PrivateStorage/tree/main)ブランチで開発しています。
+
 ## 動作環境
 Minecraft Java Edition  
-1.21.9 - 1.21.10
+1.20.2 - 1.21.8  
+~~1.21.9 - latest(がんばる)~~
 
 ## 導入方法
 [Releases](https://github.com/NePonpon/PrivateStorage/releases) からデータパックをダウンロードし、ワールドの`datapacks`フォルダへ配置してください。
+
+> [!IMPORTANT]  
+> 対応している Minecraft バージョンに気をつけてください。  
+> 旧バージョン向けのデータパックは最新の Minecraft では読み込めません。
 
 ## 使用方法
 個人ストレージを利用するエンティティを実行者にして、`private_storage:please`を実行します。

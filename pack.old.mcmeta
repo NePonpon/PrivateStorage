@@ -8,7 +8,7 @@
     "description": [
       { "text": "-= PrivateStorage =-" },"\n",
       { "text": "個人ストレージ提供データパック" },"\n",
-      { "text": "for 1.21.9 - latest" }
+      { "text": "for 1.20.2 - 1.21.8" }
     ]
   },
   "overlays": {
