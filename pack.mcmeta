@@ -13,6 +13,13 @@
   "overlays": {
     "entries": [
       {
+        "directory": "base_1_20_2",
+        "formats": {
+          "min_inclusive": 18,
+          "max_inclusive": 41
+        }
+      },
+      {
         "directory": "base_conversion_uses_storage_before_1_21",
         "formats": 41
       },
