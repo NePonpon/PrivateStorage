@@ -41,13 +41,6 @@
       {
         "directory": "rename_player_between_1_21_to_1_21_1",
         "formats": 48
-      },
-      {
-        "directory": "get_uuid_with_insertion",
-        "formats": {
-          "min_inclusive": 71,
-          "max_inclusive": 81
-        }
       }
     ]
   }
