@@ -43,13 +43,6 @@
         "formats": 48
       },
       {
-        "directory": "rename_player_after_1_21_2",
-        "formats": {
-          "min_inclusive": 57,
-          "max_inclusive": 81
-        }
-      },
-      {
         "directory": "get_uuid_with_insertion",
         "formats": {
           "min_inclusive": 71,
