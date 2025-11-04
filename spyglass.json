@@ -1,6 +1,6 @@
 {
   "env": {
-    "gameVersion": "1.20.2"
+    "gameVersion": "Latest release"
   },
   "lint": {
     "undeclaredSymbol": [
