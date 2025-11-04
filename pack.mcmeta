@@ -32,13 +32,6 @@
         "formats": 41
       },
       {
-        "directory": "after_1_21",
-        "formats": {
-          "min_inclusive": 48,
-          "max_inclusive": 81
-        }
-      },
-      {
         "directory": "get_uuid_with_conversion_after_1_21",
         "formats": {
           "min_inclusive": 48,
