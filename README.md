@@ -1,14 +1,10 @@
 # PrivateStorage
 全てのエンティティへ個別のストレージを提供します。
 
-> [!NOTE]  
-> このブランチでは、1.21.8 以前への対応を行っています。  
-> 1.21.9 以降へは[`main`](https://github.com/NePonpon/PrivateStorage/tree/main)ブランチで開発しています。
-
 ## 動作環境
 Minecraft Java Edition  
-1.20.2 - 1.21.8  
-~~1.21.9 - latest(がんばる)~~
+* 1.20.2 - 1.21.8  
+* 1.21.9 - Latest Version
 
 ## 導入方法
 [Releases](https://github.com/NePonpon/PrivateStorage/releases) からデータパックをダウンロードし、ワールドの`datapacks`フォルダへ配置してください。
@@ -44,9 +40,20 @@ data get storage private_storage: _[-8][-8][-8][-8][-8][-8]
   scoreboard players operation _ PrivateStorageId = <reference_entity> PrivateStorageId
   function private_storage:access
   ```
+* プロフィール名変更時のストレージ自動引継ぎ  
+  古いプロフィール名で個人ストレージを提供済みならば、プロフィール名を変更した後でも同じストレージを使い続けることができます。  
+  プロフィール名を変更する間にストレージのリセットが発生した場合は自動引継ぎが行われない可能性があります。
 
 ## 開発環境
 Visual Studio Code にて、拡張機能 Datapack Helper Plus by Spyglass を使用することを推奨します。
+
+常に`data`フォルダを最新の状態にします。  
+1.21.8 以前で開発する際は、`pack.old.mcmeta`を`pack.mcmeta`に名前変更してデータパックに適用してください。
+
+このデータパックはテストケースを実行して機能の正常性を確認できます。
+```mcfunction
+function #test_private_storage:all_test
+```
 
 ## Mcdocの提供
 拡張機能の Spyglass によって、Mcdoc を効果的に活用できます。  
