@@ -1,48 +1,11 @@
 {
   "pack": {
-    "pack_format": 18,
-    "supported_formats": {
-      "min_inclusive": 18,
-      "max_inclusive": 81
-    },
+    "min_format": [82, 0],
+    "max_format": [88, 0],
     "description": [
       { "text": "-= PrivateStorage =-" },"\n",
       { "text": "個人ストレージ提供データパック" },"\n",
       { "text": "for 1.21.9 - latest" }
-    ]
-  },
-  "overlays": {
-    "entries": [
-      {
-        "directory": "base_1_20_2",
-        "formats": {
-          "min_inclusive": 18,
-          "max_inclusive": 41
-        }
-      },
-      {
-        "directory": "base_conversion_uses_storage_before_1_21",
-        "formats": 41
-      },
-      {
-        "directory": "get_uuid_with_conversion_before_1_21",
-        "formats": 41
-      },
-      {
-        "directory": "rename_player_for_1_20_5",
-        "formats": 41
-      },
-      {
-        "directory": "get_uuid_with_conversion_after_1_21",
-        "formats": {
-          "min_inclusive": 48,
-          "max_inclusive": 61
-        }
-      },
-      {
-        "directory": "rename_player_between_1_21_to_1_21_1",
-        "formats": 48
-      }
     ]
   }
 }
