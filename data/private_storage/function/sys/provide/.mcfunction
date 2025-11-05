@@ -3,52 +3,16 @@
 # 指定ストレージへシフト
 #
 
-data remove storage private_storage: _[-8][-8][-8][-8][-8][14]
-data remove storage private_storage: _[-8][-8][-8][-8][-8][13]
-data remove storage private_storage: _[-8][-8][-8][-8][-8][12]
-data remove storage private_storage: _[-8][-8][-8][-8][-8][11]
-data remove storage private_storage: _[-8][-8][-8][-8][-8][10]
-data remove storage private_storage: _[-8][-8][-8][-8][-8][9]
-data remove storage private_storage: _[-8][-8][-8][-8][-8][8]
+execute if data storage private_storage: _[-8][-8][-8][-8][-8][8] run function private_storage:sys/provide/shift/reset {remove_path:"[-8][-8][-8][-8][-8]"}
+execute if data storage private_storage: _[-8][-8][-8][-8][8] run function private_storage:sys/provide/shift/reset {remove_path:"[-8][-8][-8][-8]"}
+execute if data storage private_storage: _[-8][-8][-8][8] run function private_storage:sys/provide/shift/reset {remove_path:"[-8][-8][-8]"}
+execute if data storage private_storage: _[-8][-8][8] run function private_storage:sys/provide/shift/reset {remove_path:"[-8][-8]"}
+execute if data storage private_storage: _[-8][8] run function private_storage:sys/provide/shift/reset {remove_path:"[-8]"}
+execute if data storage private_storage: _[8] run function private_storage:sys/provide/shift/reset {remove_path:""}
 
-data remove storage private_storage: _[-8][-8][-8][-8][14]
-data remove storage private_storage: _[-8][-8][-8][-8][13]
-data remove storage private_storage: _[-8][-8][-8][-8][12]
-data remove storage private_storage: _[-8][-8][-8][-8][11]
-data remove storage private_storage: _[-8][-8][-8][-8][10]
-data remove storage private_storage: _[-8][-8][-8][-8][9]
-data remove storage private_storage: _[-8][-8][-8][-8][8]
-
-data remove storage private_storage: _[-8][-8][-8][14]
-data remove storage private_storage: _[-8][-8][-8][13]
-data remove storage private_storage: _[-8][-8][-8][12]
-data remove storage private_storage: _[-8][-8][-8][11]
-data remove storage private_storage: _[-8][-8][-8][10]
-data remove storage private_storage: _[-8][-8][-8][9]
-data remove storage private_storage: _[-8][-8][-8][8]
-
-data remove storage private_storage: _[-8][-8][14]
-data remove storage private_storage: _[-8][-8][13]
-data remove storage private_storage: _[-8][-8][12]
-data remove storage private_storage: _[-8][-8][11]
-data remove storage private_storage: _[-8][-8][10]
-data remove storage private_storage: _[-8][-8][9]
-data remove storage private_storage: _[-8][-8][8]
-
-data remove storage private_storage: _[-8][14]
-data remove storage private_storage: _[-8][13]
-data remove storage private_storage: _[-8][12]
-data remove storage private_storage: _[-8][11]
-data remove storage private_storage: _[-8][10]
-data remove storage private_storage: _[-8][9]
-data remove storage private_storage: _[-8][8]
-
-data remove storage private_storage: _[14]
-data remove storage private_storage: _[13]
-data remove storage private_storage: _[12]
-data remove storage private_storage: _[11]
-data remove storage private_storage: _[10]
-data remove storage private_storage: _[9]
-data remove storage private_storage: _[8]
-
-function private_storage:sys/provide/1
+function private_storage:sys/provide/macro {scale:0.000030517578125,path:"",initial_path:"",shift:"list"}
+function private_storage:sys/provide/macro {scale:0.000244140625,path:"[-8]",initial_path:"[0]",shift:"list"}
+function private_storage:sys/provide/macro {scale:0.001953125,path:"[-8][-8]",initial_path:"[0][0]",shift:"list"}
+function private_storage:sys/provide/macro {scale:0.015625,path:"[-8][-8][-8]",initial_path:"[0][0][0]",shift:"list"}
+function private_storage:sys/provide/macro {scale:0.125,path:"[-8][-8][-8][-8]",initial_path:"[0][0][0][0]",shift:"list"}
+function private_storage:sys/provide/macro {scale:1,path:"[-8][-8][-8][-8][-8]",initial_path:"[0][0][0][0][0]",shift:"compound"}
