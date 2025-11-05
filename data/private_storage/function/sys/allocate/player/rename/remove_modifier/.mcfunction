@@ -14,6 +14,7 @@
 attribute @s minecraft:movement_speed modifier remove private_storage:provided
 
 # movment_speedのmodifierからIdが含まれたmodifier_idを取得
+data remove storage private_storage:macro allocate_player
 data remove storage private_storage:sys provide.rename_player.modifier_ids
 data modify storage private_storage:sys provide.rename_player.modifier_ids append from entity @s attributes[{id:"minecraft:movement_speed"}].modifiers[{amount:0d,operation:"add_value"}].id
 function private_storage:sys/allocate/player/rename/remove_modifier/get_id

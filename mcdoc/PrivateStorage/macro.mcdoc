@@ -1,6 +1,7 @@
 use super::sys::UUIDChars
 
 // private_storage:macro
+// マクロの実引数にはstringが良い
 
 dispatch minecraft:storage[private_storage:macro] to struct Macro {
   /// マクロ引数
@@ -13,12 +14,12 @@ dispatch private_storage:macro[%unknown] to any
 /// private_storage:root[<ここにマクロ引数にするkeyを入れる>]
 /// 各マクロ引数への補完が表示されるようになります
 dispatch private_storage:macro[TEST] to struct {
-  ponpon: int
+  ponpon: (int | string)
 }
 
 dispatch private_storage:macro[gc_get_target] to struct GC_GetTarget {
   /// 実行GCタイミング
-  gc_count: int
+  gc_count: (int | string)
 }
 
 dispatch private_storage:macro[access] to struct Access {
@@ -31,7 +32,7 @@ dispatch private_storage:macro[access] to struct Access {
 dispatch private_storage:macro[provide] to struct Provide {
   /// シフトビット
   /// 8進数における各桁の数値
-  shift: int @0..7
+  shift: (int @0..7 | string)
 }
 
 dispatch private_storage:macro[allocate_player] to struct RenamePlayer {
@@ -45,7 +46,7 @@ dispatch private_storage:macro[allocate_player] to struct RenamePlayer {
 dispatch private_storage:macro[uuid_convert] to struct UUIDConvert {
   /// シフトビット
   /// 16進数における各桁の数値
-  shift: int @0..15
+  shift: (int @0..15 | string)
 }
 
 #[until="1.21.5"]
