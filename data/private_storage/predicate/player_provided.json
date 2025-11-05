@@ -1,16 +1,17 @@
 {
-    "condition": "entity_properties",
-    "entity": "this",
-    "predicate": {
-        "type": "minecraft:player",
-        "components": {
-            "attribute_modifiers": [
-                {
-                    "type": "movement_speed",
-                    "id": "private_storage:provided",
-                    "amount": 0
-                }
-            ]
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "type": "minecraft:player",
+    "components": {
+      "attribute_modifiers": [
+        {
+          "type": "movement_speed",
+          "id": "private_storage:provided",
+          "amount": 0,
+          "operation": "add_value"
         }
+      ]
     }
+  }
 }
