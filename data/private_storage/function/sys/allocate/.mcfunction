@@ -12,7 +12,7 @@ execute if predicate private_storage:player_provided if function private_storage
 # 新規レコード追加
 data modify storage private_storage:sys provided_id_table append value {id:0,owner:"0-0-0-0-0",provide_start:0,gc_step:1.34,gc:0,is_player:false}
 # 新規Idを割り当て
-execute unless data storage private_storage:sys collected_id[0] store result score @s PrivateStorageId store result storage private_storage:sys provided_id_table[-1].id run scoreboard players add $NextId PrivateStorageCalc 1
+execute unless data storage private_storage:sys collected_id[0] store result score @s PrivateStorageId store result storage private_storage:sys provided_id_table[-1].id int 1 run scoreboard players add $NextId PrivateStorageCalc 1
 # GC済みIdを割り当て
 execute if data storage private_storage:sys collected_id[0] run function private_storage:sys/allocate/get_collected_id
 execute store result storage private_storage:sys provided_id_table[-1].provide_start int 1 run scoreboard players get $GC_Count PrivateStorageCalc
