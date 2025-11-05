@@ -4,6 +4,7 @@
 #
 
 # スコア存在確認
+data remove storage private_storage:macro access
 data modify storage private_storage:macro access.owner set from storage private_storage:sys gc.gc_target[-1].owner
 # flagはマクロ内で取得
 function private_storage:sys/gc/check_exist with storage private_storage:macro access

@@ -142,7 +142,14 @@ struct Util {
     convert?: (int | byte), // byte は、上位bitを消すときにオーバーフローを利用するためにこの型にしている
     /// UUID文字テーブル
     /// 負のシフトにも対応できるようになっている
-    uuid_char_table: [UUIDChars]
+    uuid_char_table: [UUIDChars],
+    /// 文字取得
+    uuid_char?: struct GetUUIDChar {
+      /// [$(shift)]で取得した要素
+      first?: UUIDChars,
+      /// [-$(shift)]で取得した要素
+      end?: UUIDChars
+    }
   },
 }
 
