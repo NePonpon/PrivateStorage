@@ -10,7 +10,7 @@ data modify storage private_storage:macro provide.shift set string storage priva
 execute unless data storage private_storage: _[-8][-8][0] run data modify storage private_storage: _[-8][-8] set from storage private_storage:sys initial[0][0]
 
 function private_storage:sys/provide/shift/list with storage private_storage:macro provide
-execute if data storage private_storage:sys {flag:0b} run data modify storage private_storage: _ append from storage private_storage:sys shift.first[]
-execute if data storage private_storage:sys {flag:1b} run data modify storage private_storage: _ append from storage private_storage:sys shift.end[]
+execute if data storage private_storage:sys {flag:0b} run data modify storage private_storage: _[-8][-8] append from storage private_storage:sys shift.first[]
+execute if data storage private_storage:sys {flag:1b} run data modify storage private_storage: _[-8][-8] append from storage private_storage:sys shift.end[]
 
 function private_storage:sys/provide/4
