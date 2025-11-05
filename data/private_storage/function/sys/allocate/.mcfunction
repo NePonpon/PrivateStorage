@@ -7,7 +7,7 @@ function private_storage:sys/gc/
 
 # プレイヤー名変更時 引継ぎ処理
 # 正常に引継ぎできればここで終了
-execute if predicate private_storage:player_provided if function private_storage:sys/allocate/player/rename/ run return 0
+execute if data entity @s[type=minecraft:player] attributes[{id:"minecraft:movement_speed"}].modifiers[{id:"private_storage:provided"}] if function private_storage:sys/allocate/player/rename/ run return 0
 
 # 新規レコード追加
 data modify storage private_storage:sys provided_id_table append value {id:0,owner:"0-0-0-0-0",provide_start:0,gc_step:1.34,gc:0,is_player:false}
