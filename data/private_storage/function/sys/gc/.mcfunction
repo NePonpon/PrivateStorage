@@ -3,10 +3,8 @@
 # Garbage Collection
 #
 
-scoreboard players add $GC_Count PrivateStorageCalc 1
-
 # 今回GC対象を取得
-execute store result storage private_storage:macro gc_get_target.gc_count int 1 run scoreboard players get $GC_Count PrivateStorageCalc
+execute store result storage private_storage:macro gc_get_target.gc_count int 1 run scoreboard players add $GC_Count PrivateStorageCalc 1
 data modify storage private_storage:sys gc.gc_target set value []
 function private_storage:sys/gc/get_target with storage private_storage:macro gc_get_target
 
