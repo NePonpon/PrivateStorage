@@ -5,8 +5,5 @@
     "storage": "private_storage:sys",
     "path": "util.uuid_convert.convert"
   },
-  "range": {
-    "max": -1,
-    "min": -127
-  }
+  "range": { "min": 8, "max": 15 }
 }

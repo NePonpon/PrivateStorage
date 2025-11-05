@@ -1,9 +1,9 @@
 {
-    "condition": "value_check",
-    "value": {
-        "type": "storage",
-        "storage": "private_storage:sys",
-        "path": "util.uuid_convert.convert"
-    },
-    "range": -128
+  "condition": "value_check",
+  "value": {
+    "type": "storage",
+    "storage": "private_storage:sys",
+    "path": "util.uuid_convert.convert"
+  },
+  "range": -128
 }
