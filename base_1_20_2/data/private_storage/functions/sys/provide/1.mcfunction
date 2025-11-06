@@ -11,5 +11,3 @@ execute unless data storage private_storage: _[0] run data modify storage privat
 
 function private_storage:sys/provide/shift/get/list with storage private_storage:macro provide
 data modify storage private_storage: _ append from storage private_storage:sys shift[]
-
-function private_storage:sys/provide/2

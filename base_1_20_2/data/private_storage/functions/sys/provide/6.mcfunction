@@ -1,6 +1,6 @@
-#> private_storage:sys/provide/6/
+#> private_storage:sys/provide/6
 #
-# シフト2回目
+# シフト6回目
 #
 
 execute store result storage private_storage:sys provide.target byte 16 run data get storage private_storage:sys provide_id 1
