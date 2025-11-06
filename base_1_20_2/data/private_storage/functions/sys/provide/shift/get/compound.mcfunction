@@ -1,4 +1,4 @@
-#> private_storage:sys/provide/shift/compound
+#> private_storage:sys/provide/shift/get/compound
 #
 # シフト要素取得 (Compound)
 #

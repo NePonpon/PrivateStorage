@@ -9,7 +9,7 @@ data modify storage private_storage:macro provide.shift set from storage private
 
 execute unless data storage private_storage: _[-8][-8][0] run data modify storage private_storage: _[-8][-8] set from storage private_storage:sys initial[0][0]
 
-function private_storage:sys/provide/shift/list with storage private_storage:macro provide
+function private_storage:sys/provide/shift/get/list with storage private_storage:macro provide
 data modify storage private_storage: _[-8][-8] append from storage private_storage:sys shift[]
 
 function private_storage:sys/provide/4

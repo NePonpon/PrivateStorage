@@ -1,4 +1,4 @@
-#> private_storage:sys/provide/shift/list
+#> private_storage:sys/provide/shift/get/list
 #
 # シフト要素取得 (List)
 #
